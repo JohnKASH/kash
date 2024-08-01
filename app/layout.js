@@ -6,8 +6,8 @@ import Footer from "./components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Official KASH Website",
-  description: "Official KASH Website",
+  title: "Korean American Society of Houston",
+  description: "Korean American Society of Houston",
 };
 
 export default function RootLayout({ children }) {
