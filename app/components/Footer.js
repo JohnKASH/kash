@@ -13,25 +13,22 @@ export default function Footer() {
           <p class="my-6 text-gray-500 dark:text-gray-400">Be part of something bigger in the Houston community! </p>
           <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
             <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+              <a href="/MeetOurTeam" class="mr-4 hover:underline md:mr-6 ">Meet Our Team</a>
             </li>
             <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Premium</a>
+              <a href="#" class="mr-4 hover:underline md:mr-6 ">KASH History</a>
             </li>
             <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6 ">Campaigns</a>
+              <a href="#" class="mr-4 hover:underline md:mr-6">Upcoming Events</a>
             </li>
             <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Blog</a>
-            </li>
-            <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
+              <a href="#" class="mr-4 hover:underline md:mr-6">Contact Us</a>
             </li>
             <li>
               <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
             </li>
             <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
+              <a href="#" class="mr-4 hover:underline md:mr-6">Become a Member</a>
             </li>
           </ul>
           <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">KASH fhdsklaflsda</a>. All Rights Reserved.</span>
