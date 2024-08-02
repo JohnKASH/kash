@@ -1,5 +1,5 @@
 import Image from "next/image";
-import mainPic from '@assets/HomepageImages/LandingPhoto.jpg'
+import mainPic from '@assets/LandingPageImages/LandingPhoto.jpg'
 
 export default function Home() {
   return (
