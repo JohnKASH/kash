@@ -22,13 +22,13 @@ export default function Footer() {
               <a href="#" className="mr-4 hover:underline md:mr-6">Upcoming Events</a>
             </li>
             <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6">Contact Us</a>
+              <a href="/Contact" className="mr-4 hover:underline md:mr-6">Contact Us</a>
             </li>
             <li>
               <a href="#" className="mr-4 hover:underline md:mr-6">FAQs</a>
             </li>
             <li>
-              <a href="#" className="mr-4 hover:underline md:mr-6">Become a Member</a>
+              <a href="/https://app.joinit.com/o/kash" target="blank" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500 mr-4 hover:underline md:mr-6" aria-current="page">Become a Member</a>
             </li>
           </ul>
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" className="hover:underline">KASH fhdsklaflsda</a>. All Rights Reserved.</span>
