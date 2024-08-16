@@ -40,8 +40,7 @@ export default function Home() {
               Get In <span className="text-indigo-600">Touch</span>
             </h3>
             <p className="mt-4 leading-7 text-gray-200">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo sit amet massa hendrerit bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin.
             </p>
             <div className="flex items-center mt-5">
               <span className="text-sm">House #14, Street #12, Darulaman Road, Kabul, Afghanistan.</span>
