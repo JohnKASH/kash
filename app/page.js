@@ -3,8 +3,8 @@ import mainPic from '@assets/LandingPageImages/LandingPhoto.jpg'
 
 export default function Home() {
   return (
-    <div className="bg-slate-100 min-h-full">
-      <div className="relative w-full h-96	 overflow-hidden">
+    <div className="min-h-full">
+      <div className="relative w-full h-96 overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <Image src={mainPic} className="w-full h-full object-cover" />
           <div className="absolute inset-0 w-full h-full bg-black opacity-50"></div>
@@ -31,7 +31,7 @@ export default function Home() {
         <p className="text-lg">Be part of something bigger in the Houston community!</p>
         <div className="pt-3 pb-20">
           <a href="https://app.joinit.com/o/kash" target="blank" >
-            <button className="bg-gray-400 text-white rounded-lg py-3 px-4 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 duration-200">
+            <button className="bg-kashBlue-600 text-white rounded-lg py-3 px-4 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 duration-200">
               Become a member!
             </button>
           </a>
