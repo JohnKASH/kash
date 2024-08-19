@@ -1,17 +1,17 @@
 import React from 'react'
 
-export default function TeamMember({name, title, description, image}) {
+export default function TeamMember({ name, title, description, image }) {
   return (
-    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
+    <div className="items-center bg-gray-50 rounded-lg shadow sm:flex mb-8 sm:mb-0">
       <a href="#">
-        <img className="w-full h-1/2 rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Benny side eye" />
+        <img className="h-1/2 rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Benny side eye" />
       </a>
       <div className="p-5">
-        <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h3 className="text-xl font-bold tracking-tight text-gray-900 ">
           <a href="#">{name}</a>
         </h3>
-        <span className="text-gray-500 dark:text-gray-400">{title}</span>
-        <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">{description}</p>
+        <span className="text-gray-500 ">{title}</span>
+        <p className="mt-3 mb-4 font-light text-gray-500 ">{description}</p>
         <ul className="flex space-x-4 sm:mt-0">
           <li>
             <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">

@@ -7,7 +7,7 @@ export default function Home() {
   const [state, handleSubmit] = useForm("mwpeqljp");
   if (state.succeeded) {
     return (
-      <div className="h-screen w-full dark:bg-gray-100 flex">
+      <div className="md:h-screen w-full dark:bg-gray-100 flex">
         <div className="lg:w-[60%] sm:w-[80%] xs:w-[90%] mx-auto flex gap-8 items-center justify-center">
           <div className="flex flex-col gap-4 text-black dark:text-black p-4 rounded-lg border border-kashBlue-100 shadow-xl shadow-slate-400/30">
             <h5 className="text-sm text-black font-semibold">Korean American Society of Houston</h5>
@@ -33,7 +33,7 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen flex items-center">
+    <div className="md:h-screen flex items-center">
       <div className="max-w-screen-lg mx-auto p-5">
         <div className="grid grid-cols-1 md:grid-cols-12 border">
           <div className="bg-kashBlue-900 md:col-span-4 p-10 text-white">
@@ -117,14 +117,14 @@ export default function Home() {
               <div className="flex justify-between w-full px-3">
                 <div className="md:flex md:items-center">
                   <label className="block text-gray-500 font-bold">
-                    <input name="newsletter" className="mr-2 leading-tight" type="checkbox" />
+                    <input name="newsletter" className="mr-4 sm:mr-2 leading-tight" type="checkbox" />
                     <span className="text-sm">
                       Sign me up your newsletter!
                     </span>
                   </label>
                 </div>
                 <button
-                  className="shadow bg-kashBlue-600 hover:bg-kashBlue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-6 rounded"
+                  className="shadow bg-kashBlue-600 hover:bg-kashBlue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-2 sm:px-6 rounded"
                   type="submit"
                   disabled={state.submitting}>
                   Send Message
