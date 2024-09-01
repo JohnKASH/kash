@@ -39,7 +39,7 @@ export default function Navbar() {
                 <a href="/MeetOurTeam" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">Meet Our Team</a>
               </li>
               <li className={`${isDropdownOpen ? 'underline' : ''}`}>
-                <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">KASH History</a>
+                <a href="/KASHHistory" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">KASH History</a>
               </li>
               {/* <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">Upcoming Events</a>
