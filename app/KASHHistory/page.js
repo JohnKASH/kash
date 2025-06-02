@@ -23,14 +23,14 @@ export default function Home() {
             Explore the milestones of the Korean American Society of Houston over the years.
           </p>
         </div>
-        
+
         <div className="relative border-l border-gray-200 dark:border-gray-700 mx-auto max-w-lg">
           <div className="mb-10 ml-6 text-center">
             <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-100 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
             </span>
             <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-black">Founding of KASH - 2000</h3>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January 2000</time>
-            <button 
+            <button
               onClick={() => toggleCollapse(0)}
               className="text-blue-600 hover:underline mb-4"
             >
@@ -41,9 +41,9 @@ export default function Home() {
                 <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
                   KASH was founded with the mission to bring together the Korean American community in Houston.
                 </p>
-                <Image 
-                  src={DummyImage} 
-                  alt="KASH Founding" 
+                <Image
+                  src={DummyImage}
+                  alt="KASH Founding"
                   className="rounded-lg shadow-md mx-auto"
                   width={200} // Set a specific width
                   height={150} // Set a specific height
@@ -57,7 +57,7 @@ export default function Home() {
             </span>
             <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-black">First Annual Gala - 2005</h3>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">April 2005</time>
-            <button 
+            <button
               onClick={() => toggleCollapse(1)}
               className="text-blue-600 hover:underline mb-4"
             >
@@ -68,9 +68,9 @@ export default function Home() {
                 <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
                   The first meeting was held, celebrating the achievements and future goals of KASH.
                 </p>
-                <Image 
-                  src={DummyImage} 
-                  alt="Annual Gala" 
+                <Image
+                  src={DummyImage}
+                  alt="Annual Gala"
                   className="rounded-lg shadow-md mx-auto"
                   width={200}
                   height={150}
@@ -78,13 +78,13 @@ export default function Home() {
               </div>
             )}
           </div>
-          
+
           <div className="mb-10 ml-6 text-center">
             <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-100 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
             </span>
             <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-black">The Korean Festival - 2020</h3>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">October 2020</time>
-            <button 
+            <button
               onClick={() => toggleCollapse(1)}
               className="text-blue-600 hover:underline mb-4"
             >
@@ -95,9 +95,9 @@ export default function Home() {
                 <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
                   The Korean Festival was created to celebrate Korean Culture in Houston.
                 </p>
-                <Image 
-                  src={DummyImage} 
-                  alt="Korean Festival" 
+                <Image
+                  src={DummyImage}
+                  alt="Korean Festival"
                   className="rounded-lg shadow-md mx-auto"
                   width={200}
                   height={150}

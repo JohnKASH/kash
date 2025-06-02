@@ -17,9 +17,9 @@ export default function Home() {
         <h1 className="pt-10 pb-4 text-black text-2xl md:text-3xl lg:text-4xl font-bold">Our Society</h1>
         <p className="text-lg">The Korean-American Society of Houston (KASH) is a 501(c)(3) non-profit organization dedicated to promoting Korean culture and encouraging deeper interactions between the Korean-American Community and the greater Houston public.
           KASH was established by a group of Korean-Americans and like-minded young professionals in 2008.
-          We are a diverse group that represents a broad range of age, race, and ethnicities, united by a common desire for new and exciting cultural experiences.
-          our efforts culminate in our annual banner event - the korean festival houston - which is one of the largest event hosted by a korean-american non-profit organization in the country.
         </p>
+        <p className="text-lg">We are a diverse group that represents a broad range of age, race, and ethnicities, united by a common desire for new and exciting cultural experiences.
+          our efforts culminate in our annual banner event - the korean festival houston - which is one of the largest event hosted by a korean-american non-profit organization in the country.</p>
         <h1 className="pt-10 pb-4 text-black text-2xl md:text-3xl lg:text-4xl font-bold">Our Mission</h1>
         <p className="text-lg">Our mission is to:</p>
         <ul className="text-lg">
