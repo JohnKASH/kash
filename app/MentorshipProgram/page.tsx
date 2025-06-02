@@ -1,5 +1,4 @@
 import Image from "next/image";
-import mainPic from "@assets/LandingPageImages/LandingPhoto.jpg";
 
 export default function Home() {
   return (
@@ -7,7 +6,7 @@ export default function Home() {
       {/* Header Image Section */}
       <div className="relative w-full h-96 overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <Image src={mainPic} className="w-full h-full object-cover" alt="Mentorship Program Banner" />
+          <Image fill src="/assets/LandingPageImages/LandingPhoto.jpg" className="w-full h-full object-cover" alt="Mentorship Program Banner" />
           <div className="absolute inset-0 w-full h-full bg-black opacity-50" />
         </div>
         <h1 className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white text-3xl md:text-4xl lg:text-5xl font-bold px-10">
@@ -83,8 +82,8 @@ export default function Home() {
         </Section>
 
         <Section title="Apply Today!">
-          <p>Not sure if you want to be a mentor or mentee? Apply for both! We&apos;ll match you based on experience and preferences.</p>
-          <div className="mt-4 space-x-4 mb-20">
+          <p>Not sure if you want to be a mentor or mentee? Apply for both! We&apos;ll match you based on experience and preferences. We&apos;re excited to review your application!</p>
+          <div className="mt-4 space-x-4 ">
             <a href="https://forms.gle/jxVCMJzuobKNQ1e6A" target="_blank">
               <button className="bg-kashBlue-600 text-white rounded-lg py-2 px-4 hover:bg-gray-600">Apply as Mentee</button>
             </a>
@@ -92,6 +91,10 @@ export default function Home() {
               <button className="bg-kashBlue-600 text-white rounded-lg py-2 px-4 hover:bg-gray-600">Apply as Mentor</button>
             </a>
           </div>
+        </Section>
+
+        <Section title="Have questions?">
+          <p>Email us! - John@kashouston.org</p>
         </Section>
 
       </div>

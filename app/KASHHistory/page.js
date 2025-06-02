@@ -1,7 +1,6 @@
 "use client";
 import { useState } from 'react';
 import Image from "next/image";
-import DummyImage from '@assets/KASHHistoryImages/DummyImage.jpg';
 
 export default function Home() {
   const [isCollapsed, setIsCollapsed] = useState([false, false]);
@@ -42,7 +41,7 @@ export default function Home() {
                   KASH was founded with the mission to bring together the Korean American community in Houston.
                 </p>
                 <Image
-                  src={DummyImage}
+                  src="/assets/KASHHistoryImages/DummyImage.jpg"
                   alt="KASH Founding"
                   className="rounded-lg shadow-md mx-auto"
                   width={200} // Set a specific width
@@ -69,7 +68,7 @@ export default function Home() {
                   The first meeting was held, celebrating the achievements and future goals of KASH.
                 </p>
                 <Image
-                  src={DummyImage}
+                  src="/assets/KASHHistoryImages/DummyImage.jpg"
                   alt="Annual Gala"
                   className="rounded-lg shadow-md mx-auto"
                   width={200}
@@ -96,7 +95,7 @@ export default function Home() {
                   The Korean Festival was created to celebrate Korean Culture in Houston.
                 </p>
                 <Image
-                  src={DummyImage}
+                  src="/assets/KASHHistoryImages/DummyImage.jpg"
                   alt="Korean Festival"
                   className="rounded-lg shadow-md mx-auto"
                   width={200}

@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from 'react';
-import logo from '@assets/logo.png';
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -15,7 +14,7 @@ export default function Navbar() {
       <nav className="bg-white border-gray-200">
         <div className="flex flex-wrap items-center justify-between lg:mx-16 p-4">
           <a href="/">
-            <Image src={logo} width={100} height={100} alt="Logo" />
+            <Image src="/assets/logo.png" width={100} height={100} alt="Logo" />
           </a>
           <button
             data-collapse-toggle="navbar-default"
@@ -47,9 +46,9 @@ export default function Navbar() {
               {/* <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">Upcoming Events</a>
               </li> */}
-              <li className={`${isDropdownOpen ? 'underline' : ''}`}>
+              {/* <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="/Contact" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">Contact Us</a>
-              </li>
+              </li> */}
               <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="https://app.joinit.com/o/kash" target="blank" className="block py-2 px-3 text-white bg-kashBlue-600 rounded md:bg-transparent md:text-kashBlue-600 md:p-0  md:dark:text-blue-500 hover:text-gray-700" aria-current="page">Become a Member</a>
               </li>

@@ -1,12 +1,11 @@
 import Image from "next/image";
-import mainPic from '@assets/LandingPageImages/LandingPhoto.jpg'
 
 export default function Home() {
   return (
     <div className="min-h-full">
       <div className="relative w-full h-96 overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <Image src={mainPic} className="w-full h-full object-cover" />
+          <Image src="/assets/LandingPageImages/LandingPhoto.jpg" fill className="w-full h-full object-cover" />
           <div className="absolute inset-0 w-full h-full bg-black opacity-50"></div>
         </div>
         <h1 className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white text-2xl md:text-4xl lg:text-5xl font-bold px-10">
