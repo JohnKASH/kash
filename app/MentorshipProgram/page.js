@@ -102,7 +102,7 @@ export default function Home() {
   );
 }
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({ title, children }) {
   return (
     <section className="pt-10 pb-4">
       <h2 className="text-black text-2xl md:text-3xl lg:text-4xl font-bold">{title}</h2>
