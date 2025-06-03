@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Head from "next/head";
 import "./globals.css";
 import Footer from "./components/Footer";
+import { LanguageProvider } from "./components/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -211,9 +212,11 @@ export default function RootLayout({ children }) {
         <meta name="twitter:image" content={metadata.twitter.images[0].url} />
       </Head>
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <LanguageProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );
