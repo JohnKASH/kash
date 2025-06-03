@@ -93,7 +93,18 @@ const translations = {
       requirements: {
         title: "Requirements",
         list: [
-          'Be a current KASH Member (Join here). We offer student discounts!',
+          <>
+            Be a current KASH Member (
+            <a
+              className="text-kashBlue-600 underline"
+              href="https://app.joinit.com/o/kash"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join here
+            </a>
+            ). <span className="text-sm text-gray-600">We offer student discounts!</span>
+          </>,
           "Mentees: College or early post-college individuals seeking guidance",
           "Mentors: Industry professionals willing to share knowledge",
           "Commitment to scheduled meetings and program activities",
@@ -160,7 +171,18 @@ const translations = {
       requirements: {
         title: "자격 요건",
         list: [
-          '현재 KASH 회원이어야 합니다 (가입하기). 학생 할인 제공!',
+          <>
+            현재 KASH 회원이어야 합니다 (
+            <a
+              className="text-kashBlue-600 underline"
+              href="https://app.joinit.com/o/kash"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join here
+            </a>
+            ). <span className="text-sm text-gray-600">학생 할인 제공!</span>
+          </>,
           "멘티: 멘토의 지도가 필요한 대학생 또는 졸업생",
           "멘토: 지식을 공유할 준비가 된 산업 전문가",
           "정기적인 만남과 프로그램 활동에 대한 약속",
