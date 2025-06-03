@@ -56,7 +56,7 @@ export default function Navbar() {
               <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="https://app.joinit.com/o/kash" target="blank" className="block py-2 px-3 text-white bg-kashBlue-600 rounded md:bg-transparent md:text-kashBlue-600 md:p-0  md:dark:text-blue-500 hover:text-gray-700" aria-current="page">{t.becomeMember}</a>
               </li>
-              <li className="flex items-center">
+              <li className={`${isDropdownOpen ? 'underline mt-2' : 'flex items-center'}`}>
                 <button
                   onClick={toggleLanguage}
                   className="text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border md:border-kashBlue-600 md:text-kashBlue-600 md:hover:bg-kashBlue-50 transition duration-200"
