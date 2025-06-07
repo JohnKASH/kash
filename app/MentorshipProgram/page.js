@@ -31,6 +31,7 @@ export default function Home() {
         </Section>
 
         {[
+          "skills",
           "requirements",
           "timeline",
           "structure",
@@ -64,6 +65,7 @@ export default function Home() {
 
         <Section title={t.sections.questions.title}>
           <p>{t.sections.questions.p}</p>
+          <p className="mb-4">{t.sections.questions.pp}</p>
         </Section>
       </div>
     </div>
@@ -89,6 +91,21 @@ const translations = {
         p1: "Interested in giving back or gaining guidance through mentorship? The KASH Mentorship Program is an opportunity for members of the Korean American Society of Houston to connect, learn, and grow together.",
         p2: "Whether you're looking to mentor or be mentored, this program offers a welcoming space to share experiences, build meaningful relationships, and support one another within our community.",
         p3: "This initiative pairs college and early post-college individuals with mentors based on shared interests such as business, entrepreneurship, engineering, coding, teaching, and more.",
+      },
+      skills: {
+        title: "What Our Mentors Can Offer",
+        list: [
+          "Commercial Real Estate Development",
+          "Practical/Financial literacy",
+          "Business Development",
+          "Public Speaking/Leadership",
+          "Entrepreneurship",
+          "Public relations",
+          "Marketing",
+          "Frontend Web Development",
+          "General Career Planning/Professional Growth",
+          "and many more!",
+        ],
       },
       requirements: {
         title: "Requirements",
@@ -156,6 +173,7 @@ const translations = {
       questions: {
         title: "Have questions?",
         p: "Email us! - John@kashouston.org",
+        pp: "Please do not be shy! We welcome all and can make accomodations if needed."
       },
     },
   },
@@ -187,6 +205,21 @@ const translations = {
           "멘토: 지식을 공유할 준비가 된 산업 전문가",
           "정기적인 만남과 프로그램 활동에 대한 약속",
           "긍정적인 태도!",
+        ],
+      },
+      skills: {
+        title: "멘토가 제공할 수 있는 분야",
+        list: [
+          "상업용 부동산 개발",
+          "실용적/재정적 지식",
+          "비즈니스 개발",
+          "대중 연설/리더십",
+          "창업",
+          "홍보(Public Relations)",
+          "마케팅",
+          "프론트엔드 웹 개발",
+          "커리어 설계/직업 성장",
+          "그 외 다양한 분야!",
         ],
       },
       timeline: {
