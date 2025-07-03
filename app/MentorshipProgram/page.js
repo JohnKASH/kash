@@ -156,7 +156,7 @@ const translations = {
       expectations: {
         title: "Mentorship Expectations",
         list: [
-          "Attend the Kickoff Mixer: July 11, 2025",
+          "Attend the Kickoff Mixer: July 11, 2025, 6:30 PM CST at One Shot Pocha",
           "Minimum 2 meetings/month with each other (at least one in-person)",
           "Participate in the post-program feedback survey",
           "Maintain professionalism and communication",
