@@ -41,6 +41,9 @@ export default function Navbar() {
               <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="/MentorshipProgram" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">{t.mentorshipProgram}</a>
               </li>
+              <li className={`${isDropdownOpen ? 'underline' : ''}`}>
+                <a href="/KoreanFestival" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">{t.koreanFestival}</a>
+              </li>
               {/* <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="/MeetOurTeam" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">{t.meetOurTeam}</a>
               </li> */}
@@ -80,6 +83,7 @@ const translations = {
     mentorshipProgram: "2025 Mentorship Program",
     meetOurTeam: "Meet Our Team",
     kashHistory: "KASH History",
+    koreanFestival: "Korean Festival",
     upcomingEvents: "Upcoming Events",
     contactUs: "Contact Us",
     becomeMember: "Become a Member",
@@ -90,6 +94,7 @@ const translations = {
     mentorshipProgram: "2025 멘토십 프로그램",
     meetOurTeam: "팀 소개",
     kashHistory: "KASH 역사",
+    koreanFestival: "한국 페스티벌",
     upcomingEvents: "예정된 행사",
     contactUs: "문의하기",
     becomeMember: "회원 가입",
