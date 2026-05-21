@@ -38,8 +38,11 @@ export default function Navbar() {
               <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="/" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">{t.home}</a>
               </li>
-              <li className={`${isDropdownOpen ? 'underline' : ''}`}>
+              {/* <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="/MentorshipProgram" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">{t.mentorshipProgram}</a>
+              </li> */}
+              <li className={`${isDropdownOpen ? 'underline' : ''}`}>
+                <a href="/Scholarship" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">{t.scholarship}</a>
               </li>
               <li className={`${isDropdownOpen ? 'underline' : ''}`}>
                 <a href="/KoreanFestival" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-kashBlue-600 md:p-0">{t.koreanFestival}</a>
@@ -81,6 +84,7 @@ const translations = {
   en: {
     home: "Home",
     mentorshipProgram: "2025 Mentorship Program",
+    scholarship: "2026 Scholarship Program",
     meetOurTeam: "Meet Our Team",
     kashHistory: "KASH History",
     koreanFestival: "Korean Festival",
@@ -92,6 +96,7 @@ const translations = {
   ko: {
     home: "홈",
     mentorshipProgram: "2025 멘토십 프로그램",
+    scholarship: "2026 장학금 프로그램",
     meetOurTeam: "팀 소개",
     kashHistory: "KASH 역사",
     koreanFestival: "한국 페스티벌",
