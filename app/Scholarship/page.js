@@ -14,7 +14,7 @@ export default function ScholarshipPage() {
         />
         <div className="absolute inset-0 w-full h-full bg-black opacity-50" />
         <h1 className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white text-3xl md:text-4xl lg:text-5xl font-bold px-10">
-          Korean Festival 2025
+          2026 KASH Scholarship Program
         </h1>
       </div>
 
@@ -25,12 +25,14 @@ export default function ScholarshipPage() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">About the Program</h2>
           <div className="w-12 h-1 bg-blue-800 rounded mx-auto mt-3 mb-8" />
           <p className="text-lg text-gray-500 text-center max-w-2xl mx-auto mb-4">
-            The Korean American Society of Houston is proud to support students who are working hard, pursuing their goals, and making a positive impact in their communities. Through the 2026 KASH Scholarship Program, we hope to recognize students not only for academic achievement, but also for creativity, perseverance, leadership, and personal growth.
+            The Korean American Society of Houston is proud to support students who are working hard,
+            to pursue their goals, and make a positive impact in their communities.
+            Through the 2026 KASH Scholarship Program, we hope to recognize students
+            for their creativity, perseverance, leadership, and personal growth academically or artistically.
           </p>
           <p className="text-base text-gray-500 text-center max-w-2xl mx-auto">
             We encourage all students to apply — we value{" "}
-            <span className="text-gray-900 font-semibold">authenticity, effort, and potential</span>{" "}
-            just as much as accomplishments on paper.
+            <span className="text-gray-900 font-semibold">authenticity, effort, and potential.</span>{" "}
           </p>
         </section>
 
@@ -94,12 +96,12 @@ export default function ScholarshipPage() {
               {
                 num: 1,
                 title: "Complete the Application Form",
-                body: "Fill out the Google Form application in full. Every field is required — incomplete applications will not be eligible.",
+                body: "Fill out the Google Form application in full. Incomplete applications will not be eligible.",
               },
               {
                 num: 2,
-                title: "Prepare Additional Materials",
-                body: "Gather any supplemental materials specified in the application. Creative projects must follow the provided prompt and guidelines exactly.",
+                title: "Submit Additional Materials",
+                body: "Creative projects must follow the provided prompt and guidelines exactly.",
               },
               {
                 num: 3,
