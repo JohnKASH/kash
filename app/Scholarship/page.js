@@ -31,6 +31,9 @@ export default function ScholarshipPage() {
             for their creativity, perseverance, leadership, and personal growth academically or artistically.
           </p>
           <p className="text-base text-gray-500 text-center max-w-2xl mx-auto">
+            Please note that you do NOT have to be Korean American to apply.
+          </p>
+          <p className="text-base text-gray-500 text-center max-w-2xl mx-auto">
             We encourage all students to apply — we value{" "}
             <span className="text-gray-900 font-semibold">authenticity, effort, and potential.</span>{" "}
           </p>
@@ -41,7 +44,7 @@ export default function ScholarshipPage() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">This Year&apos;s Awards</h2>
           <div className="w-12 h-1 bg-blue-800 rounded mx-auto mt-3 mb-3" />
           <p className="text-center text-gray-500 mb-10">
-            KASH will award two $1,000 scholarships through the following opportunities
+            KASH will award multiple $1,000 scholarships through the following opportunities
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -82,6 +85,104 @@ export default function ScholarshipPage() {
               <span className="font-bold text-blue-800">required to attend</span> Korean Festival Houston at Discovery Green on{" "}
               <span className="font-bold text-blue-800">October 10, 2026</span>, where they will be publicly recognized and celebrated.
             </p>
+          </div>
+        </section>
+
+        {/* REQUIREMENTS */}
+        <section className="mb-20">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Requirements</h2>
+          <div className="w-12 h-1 bg-blue-800 rounded mx-auto mt-3 mb-3" />
+          <p className="text-center text-gray-500 mb-10">Review the requirements for each award before applying</p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+            {/* Academic Excellence */}
+            <div className="border border-gray-200 rounded-2xl p-8 relative overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-800 to-amber-500 rounded-t-2xl" />
+              <div className="text-3xl mb-4">🏆</div>
+              <p className="text-xs font-bold tracking-widest uppercase text-blue-800 mb-2">Award I</p>
+              <h3 className="text-xl font-bold mb-3">KASH Academic Excellence Award</h3>
+              <p className="text-gray-500 text-sm mb-5">
+                Recognizes students who demonstrate commitment to their education, perseverance, leadership, and future potential. This scholarship is intended for students who strive to grow academically while contributing positively to their schools, families, and communities.
+              </p>
+              <p className="text-gray-400 text-xs italic mb-5">
+                We understand that every student&apos;s journey is different, and we encourage applicants from all backgrounds and experiences to apply.
+              </p>
+
+              <div className="mt-auto">
+                <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Requirements</p>
+                <ul className="space-y-2 mb-5">
+                  <li className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                    <span>
+                      <span className="font-semibold text-gray-800">Minimum Unweighted GPA</span>
+                      <span className="block text-gray-500 mt-0.5 ml-0.5">High School Students: 2.3 &nbsp;·&nbsp; College Students: 3.0</span>
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                    Applicants who do not meet the GPA requirement are still encouraged to apply and explain their circumstances.
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                    One-page resume required
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                    Two short essays required
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Creative Voice */}
+            <div className="border border-gray-200 rounded-2xl p-8 relative overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-800 to-amber-500 rounded-t-2xl" />
+              <div className="text-3xl mb-4">🎨</div>
+              <p className="text-xs font-bold tracking-widest uppercase text-blue-800 mb-2">Award II</p>
+              <h3 className="text-xl font-bold mb-3">KASH Creative Voice Award</h3>
+              <p className="text-gray-500 text-sm mb-5">
+                Celebrates creativity, storytelling, and self-expression. Designed for students who want to share their ideas, perspectives, and talents through creative work. Applicants are encouraged to think outside the box and express themselves authentically.
+              </p>
+              <p className="text-gray-400 text-xs italic mb-5">
+                Submissions may explore Korean culture, identity, tradition, community, or personal interpretation through any creative medium.
+              </p>
+
+              <div className="mt-auto">
+                <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Requirements</p>
+                <ul className="space-y-2 mb-5">
+                  <li className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                    No GPA requirement
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                    Open to all eligible students
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                    One original creative submission required
+                  </li>
+                </ul>
+
+                <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Accepted Formats</p>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Video", "Photography", "Artwork or Drawing", "Digital Design",
+                    "Music", "Dance", "Poetry", "Writing", "Animation",
+                    "Multimedia Projects", "Other Creative Formats",
+                  ].map((format) => (
+                    <span
+                      key={format}
+                      className="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full"
+                    >
+                      {format}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
