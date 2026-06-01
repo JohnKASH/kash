@@ -14,7 +14,7 @@ const faqs = [
       },
       {
         q: "Do I have to live in Houston or Texas to apply?",
-        a: "We primarily serve the greater Houston community, but students outside of Houston or Texas are still eligible to apply. Please note that recipients are required to attend the Korean Festival Houston on October 11, 2026 to receive their award in person."
+        a: "We primarily serve the greater Houston community, but students outside of Houston or Texas are still eligible to apply. Please note that recipients are required to attend the Korean Festival Houston on October 10, 2026 to receive their award in person."
       },
       {
         q: "Can international students or non-U.S. citizens apply?",
@@ -39,7 +39,7 @@ const faqs = [
     items: [
       {
         q: "How will I know my application was received?",
-        a: "You will receive a confirmation email after submitting through the JotForm application. If you do not receive one within 24 hours, please email John@kashouston.org."
+        a: "You will receive a confirmation email after submitting through the JotForm application. If you do not receive one within 48-72 hours, please email John@kashouston.org."
       },
       {
         q: "Can I edit or update my application after submitting?",
