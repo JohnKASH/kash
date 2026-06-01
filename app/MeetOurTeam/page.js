@@ -44,76 +44,76 @@ const team = [
       "💬 Please do it! I've met lots of my friends through volunteering for KASH.",
     ],
   },
-{
-  name: "Heather Gaskins",
+  {
+    name: "Heather Gaskins",
     title: "Korean Village & Cultural Activities Director",
-      image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/028214cd-e4c7-4048-afde-3b03a75fabba/image.png",
-        bio: [
-          "Heather joined KASH in 2018 after her little sister invited her to a casual K-BBQ picnic—and from that moment on, she knew she'd found her community. As the daughter of a retired U.S. Air Force Master Sergeant, Heather grew up experiencing life across the globe, from living in Turkey and Germany to her early college days in Hawaii. Those adventures sparked a lifelong love for exploring cultures and a deep passion for building community wherever she goes.",
-          "Today, she brings that same energy to Korean Village, Korean Festival's interactive learning space designed for curious minds from ages 8 to 80.",
-        ],
-          funFacts: [
-            "👩‍🍳 Fun fact: Heather holds a degree in culinary arts.",
-            "⭐ Free-time fun: Cooking, hanging out with her dog Mr. Darcy, and going on shopping trips with her mom and sisters",
-            "💙 Find the sweetness in life.There's always something good to be found—even on the worst day!",
-          ],
+    image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/028214cd-e4c7-4048-afde-3b03a75fabba/image.png",
+    bio: [
+      "Heather joined KASH in 2018 after her little sister invited her to a casual K-BBQ picnic—and from that moment on, she knew she'd found her community. As the daughter of a retired U.S. Air Force Master Sergeant, Heather grew up experiencing life across the globe, from living in Turkey and Germany to her early college days in Hawaii. Those adventures sparked a lifelong love for exploring cultures and a deep passion for building community wherever she goes.",
+      "Today, she brings that same energy to Korean Village, Korean Festival's interactive learning space designed for curious minds from ages 8 to 80.",
+    ],
+    funFacts: [
+      "👩‍🍳 Fun fact: Heather holds a degree in culinary arts.",
+      "⭐ Free-time fun: Cooking, hanging out with her dog Mr. Darcy, and going on shopping trips with her mom and sisters",
+      "💙 Find the sweetness in life.There's always something good to be found—even on the worst day!",
+    ],
   },
-{
-  name: "Kimmy Nunley",
+  {
+    name: "Kimmy Nunley",
     title: "Marketing Director",
-      image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/85cf0a70-7b50-455c-bf53-963e7ccc9d2c/Screenshot+2025-07-30+140640.png",
-        bio: [
-          "Since 2018, Kimmy Nunley (formerly Gaskins) has been the creative voice behind Korean Festival Houston's expanding reach. Raised in a globe-trotting Air Force family, Kimmy brings her vibrant spirit and deep cultural appreciation to every marketing campaign and conversation.",
-          "With a background in administrative support and a knack for connecting with people, she's helped KASH grow while building community across all walks of life. Her artistry and writing infuse the festival's messaging with authenticity and warmth, inviting everyone to experience Korean culture.",
-        ],
-          funFacts: [
-            "🍦 Fun fact: Kimmy mastered the perfect soft-serve swirl at Chick-fil-A!",
-            "📚🎬 In her downtime: Curling up with a book, gaming, watching K-Dramas, and quality time with her cats, Penny and Moon, and her husband",
-            "💬 It only takes one small 'yes' to change your future and pursue something new.Our goal is to change our community, and guess what, YOU'RE INVITED! ☺️",
-          ],
+    image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/85cf0a70-7b50-455c-bf53-963e7ccc9d2c/Screenshot+2025-07-30+140640.png",
+    bio: [
+      "Since 2018, Kimmy Nunley (formerly Gaskins) has been the creative voice behind Korean Festival Houston's expanding reach. Raised in a globe-trotting Air Force family, Kimmy brings her vibrant spirit and deep cultural appreciation to every marketing campaign and conversation.",
+      "With a background in administrative support and a knack for connecting with people, she's helped KASH grow while building community across all walks of life. Her artistry and writing infuse the festival's messaging with authenticity and warmth, inviting everyone to experience Korean culture.",
+    ],
+    funFacts: [
+      "🍦 Fun fact: Kimmy mastered the perfect soft-serve swirl at Chick-fil-A!",
+      "📚🎬 In her downtime: Curling up with a book, gaming, watching K-Dramas, and quality time with her cats, Penny and Moon, and her husband",
+      "💬 It only takes one small 'yes' to change your future and pursue something new.Our goal is to change our community, and guess what, YOU'RE INVITED! ☺️",
+    ],
   },
-{
-  name: "Patricia Han",
+  {
+    name: "Patricia Han",
     title: "Vendors Director",
-      image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/60d85f17-f5e2-4aeb-b124-fe8d67183bf0/1517573951057.jpg",
-        bio: [
-          "Patricia Han joined KASH in 2018 and quickly became a familiar face—and heart—within the community. Since 2021, she's been a key part of the Vendors team, bringing her signature mix of organization, kindness, and can-do spirit to every festival.",
-          "By day, Patricia is a Physical Therapist at CHI St. Luke's Health – Baylor St. Luke's Medical Center, where she puts her Doctor of Physical Therapy degree to work helping people heal and thrive. Her passion for care doesn't stop at the clinic—she also travels to underserved areas through medical missions, partnering with Villa de las Niñas in Chalco, Mexico to bring healing where it's needed most.",
-          "Whether she's coordinating vendors or lending a hand abroad, Patricia is all about building community, one meaningful connection at a time.",
-        ],
-          funFacts: [
-            "👟 Fun fact: Patricia can tie her shoes with one hand. Don't ask her to show you, she can't share her trade secrets.",
-            "🎤 Favorite pastime: Trying new restaurants, karaoke, and spending time with friends",
-            "🩶 Don't give up! There's something good coming around the bend!",
-          ],
+    image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/60d85f17-f5e2-4aeb-b124-fe8d67183bf0/1517573951057.jpg",
+    bio: [
+      "Patricia Han joined KASH in 2018 and quickly became a familiar face—and heart—within the community. Since 2021, she's been a key part of the Vendors team, bringing her signature mix of organization, kindness, and can-do spirit to every festival.",
+      "By day, Patricia is a Physical Therapist at CHI St. Luke's Health – Baylor St. Luke's Medical Center, where she puts her Doctor of Physical Therapy degree to work helping people heal and thrive. Her passion for care doesn't stop at the clinic—she also travels to underserved areas through medical missions, partnering with Villa de las Niñas in Chalco, Mexico to bring healing where it's needed most.",
+      "Whether she's coordinating vendors or lending a hand abroad, Patricia is all about building community, one meaningful connection at a time.",
+    ],
+    funFacts: [
+      "👟 Fun fact: Patricia can tie her shoes with one hand. Don't ask her to show you, she can't share her trade secrets.",
+      "🎤 Favorite pastime: Trying new restaurants, karaoke, and spending time with friends",
+      "🩶 Don't give up! There's something good coming around the bend!",
+    ],
   },
-{
-  name: "Jeong-min Park",
+  {
+    name: "Jeong-min Park",
     title: "VIP Hospitality Director",
-      image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/d1a575c0-4a02-4d09-affc-40416e5103de/headshot_JPark.JPG",
-        bio: [
-          "Jeong-Min moved to Houston from Korea six years ago and has been serving with KASH for the past two. As a researcher at the Texas Medical Center and cultural ambassador at heart, she's passionate about sharing her heritage with the Houston community.",
-          "Whether she's organizing VIP experiences or leading outreach during Lunar New Year, her attention to detail and love for Korean culture shine through. She's excited about the festival's future growth and committed to passing on her experience to future leaders.",
-        ],
-          funFacts: [
-            "👩‍🔬 Fun fact: All the famous Koreans named Jeong-Min are men—except her!",
-            "📺🎧 Fave free-time activities: Watching shows, reading webtoons, and working out",
-            "💬 We warmly welcome everyone who wants to be part of KASH.Just take the first step!",
-          ],
+    image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/d1a575c0-4a02-4d09-affc-40416e5103de/headshot_JPark.JPG",
+    bio: [
+      "Jeong-Min moved to Houston from Korea six years ago and has been serving with KASH for the past two. As a researcher at the Texas Medical Center and cultural ambassador at heart, she's passionate about sharing her heritage with the Houston community.",
+      "Whether she's organizing VIP experiences or leading outreach during Lunar New Year, her attention to detail and love for Korean culture shine through. She's excited about the festival's future growth and committed to passing on her experience to future leaders.",
+    ],
+    funFacts: [
+      "👩‍🔬 Fun fact: All the famous Koreans named Jeong-Min are men—except her!",
+      "📺🎧 Fave free-time activities: Watching shows, reading webtoons, and working out",
+      "💬 We warmly welcome everyone who wants to be part of KASH.Just take the first step!",
+    ],
   },
-{
-  name: "John Nam",
+  {
+    name: "John Nam",
     title: "Volunteer Director",
-      image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/97f36cc1-1676-4204-98a2-2fb63cf72871/IMG_6760.jpg",
-        bio: [
-          "John has been involved in KASH activites after being forced to participate by his brother but finally became an officer in 2023, bringing tech-savvy skills, teaching experience, and a whole lot of enthusiasm to the Korean Festival Houston. Whether he's recruiting volunteers, building websites, or translating for performers, John's all in—driven by a love for Korean culture and a legacy started by his brother, one of the festival's original organizers.",
-          "With a background in electrical engineering and a job supporting schools through edtech, John is all about growth and community. He's proud of helping KASH spread joy year-round through events and wants to see more young members and networking opportunities in the future.",
-        ],
-          funFacts: [
-            "🃏 Fun fact: John's a jack of all trades and recently dove into trading cards",
-            "🕹 Free-time faves: Watching shows, gaming with friends, and learning something new",
-            "💬 Join! You won't regret it! If you enjoy Korean dramas, foods, music, or just want to hang out with friends, this is a great organization to do just that. You will find people with similar interests and build great relationships within the org.",
-          ],
+    image: "https://images.squarespace-cdn.com/content/v1/59305f4df7e0ab8a82c43c7a/97f36cc1-1676-4204-98a2-2fb63cf72871/IMG_6760.jpg",
+    bio: [
+      "John has been involved in KASH activites after being forced to participate by his brother but finally became an officer in 2023, bringing tech-savvy skills, teaching experience, and a whole lot of enthusiasm to the Korean Festival Houston. Whether he's recruiting volunteers, building websites, or translating for performers, John's all in—driven by a love for Korean culture and a legacy started by his brother, one of the festival's original organizers.",
+      "With a background in electrical engineering and a job supporting schools through edtech, John is all about growth and community. He's proud of helping KASH spread joy year-round through events and wants to see more young members and networking opportunities in the future.",
+    ],
+    funFacts: [
+      "🃏 Fun fact: John's a jack of all trades and recently dove into trading cards",
+      "🕹 Free-time faves: Watching shows, gaming with friends, and learning something new",
+      "💬 Join! You won't regret it! If you enjoy Korean dramas, foods, music, or just want to hang out with friends, this is a great organization to do just that. You will find people with similar interests and build great relationships within the org.",
+    ],
   },
 ];
 
@@ -126,9 +126,7 @@ export default function MeetOurTeam() {
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: "url('/assets/kfestImages/Drummers.jpg')",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center center",
+            backgroundImage: "url('/assets/kfestImages/GroupPhoto.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-black/50" />

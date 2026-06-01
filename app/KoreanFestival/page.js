@@ -10,9 +10,7 @@ export default function KoreanFestival() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/assets/kfestImages/Groupphoto.jpg')",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center center",
+            backgroundImage: "url('/assets/kfestImages/Crowd.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-black/50" />

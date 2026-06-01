@@ -80,9 +80,7 @@ export default function KASHHistory() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/assets/kfestImages/Groupphoto.jpg')",
-            backgroundAttachment: "fixed",
-            backgroundPosition: "center center",
+            backgroundImage: "url('/assets/kfestImages/Giwonmu.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-black/50" />
