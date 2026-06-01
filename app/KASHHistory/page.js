@@ -38,7 +38,7 @@ const milestones = [
   },
   {
     year: "2024",
-    title: "15th Anniversary & Two-Day Expansion",
+    title: "15th Anniversary and Two-Day Expansion",
     description:
       "Korean Festival Houston celebrates its fifteenth anniversary. In a landmark moment, the festival expands to TWO days for the first time, welcoming over 35,000 visitors in a single day. KASH reflects on how far the event has come — from a parking lot gathering to one of the most beloved cultural festivals in the country.",
     note: null,
@@ -99,7 +99,7 @@ export default function KASHHistory() {
           <div className="w-12 h-1 bg-kashBlue-600 rounded mx-auto mt-3 mb-6" />
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             What began as a dream among a small group of young Korean-American professionals
-            has grown into one of Houston's most beloved cultural institutions. This is the story of KASH.
+            has grown into one of Houston&apos;s most beloved cultural institutions. This is the story of KASH.
           </p>
         </section>
 
@@ -159,7 +159,7 @@ export default function KASHHistory() {
         <section className="bg-gradient-to-br from-blue-800 to-blue-950 rounded-2xl px-8 py-14 text-center mb-24">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Be Part of the Story</h2>
           <p className="text-white/70 max-w-md mx-auto mb-8">
-            KASH is always growing. Whether you want to volunteer, become a member, or sponsor the festival — there's a place for you.
+            KASH is always growing. Whether you want to volunteer, become a member, or sponsor the festival — there&apos;s a place for you.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://app.joinit.com/o/kash" target="_blank" rel="noopener noreferrer">
