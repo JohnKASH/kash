@@ -1,139 +1,129 @@
-'use client'
-import React, { useRef } from 'react';
+"use client"
 import { useForm, ValidationError } from '@formspree/react';
+import PageHero from "@/components/PageHero";
+import SectionHeading from "@/components/SectionHeading";
+import Button from "@/components/Button";
+import { ArrowRight, Check } from "@/components/icons";
 
-export default function Home() {
-  const form = useRef();
-  const [state, handleSubmit] = useForm("xojzwgdr");
-  if (state.succeeded) {
-    return (
-      <div className="md:h-screen w-full dark:bg-gray-100 flex">
-        <div className="lg:w-[60%] sm:w-[80%] xs:w-[90%] mx-auto flex gap-8 items-center justify-center">
-          <div className="flex flex-col gap-4 text-black dark:text-black p-4 rounded-lg border border-kashBlue-100 shadow-xl shadow-slate-400/30">
-            <h5 className="text-sm text-black font-semibold">Korean American Society of Houston</h5>
-            <div className="w-full flex gap-2 items-center justify-around">
-              <div className="text-5xl font-semibold uppercase font-serif">Thank You</div>
-              <hr className="w-[50%] h-1 rounded-full border-t-kashBlue-600 bg-kashBlue-600" />
-            </div>
-            <p className="text-sm">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo sit amet massa hendrerit bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin.
-            </p>
-            <div className="flex gap-4 justify-center">
-              <a href="/" className="w-full px-4 py-1 border-2 border-kashBlue-600 rounded-sm text-center flex items-center justify-center duration-200 hover:bg-kashBlack-100 hover:text-white">
-                Return to homepage
-              </a>
-              <a href="https://app.joinit.com/o/kash" target="blank" className="w-full text-white px-4 py-1 bg-kashBlue-600 rounded-sm text-center flex items-center justify-center duration-200 hover:bg-kashBlack-100">
-                Become a Member
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+const CONTACT_EMAIL = "info@kashouston.org";
+
+export default function ContactPage() {
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT);
 
   return (
-    <div className="md:h-screen flex items-center">
-      <div className="max-w-screen-lg mx-auto p-5">
-        <div className="grid grid-cols-1 md:grid-cols-12 border">
-          <div className="bg-kashBlue-900 md:col-span-4 p-10 text-white">
-            <p className="mt-4 text-sm leading-7 font-regular uppercase">Contact</p>
-            <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight">
-              Get In <span className="text-kashBlue-300">Touch</span>
-            </h3>
-            <p className="mt-4 leading-7 text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo sit amet massa hendrerit bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin.
-            </p>
-            <div className="flex items-center mt-5">
-              <span className="text-sm">House #14, Street #12, something Road, Houston, Texas.</span>
-            </div>
-            <div className="flex items-center mt-5">
-              <span className="text-sm">+832 100 1000</span>
-            </div>
-            <div className="flex items-center mt-5">
-              <span className="text-sm">some information?</span>
-            </div>
-          </div>
-          <form ref={form} className="md:col-span-8 p-10" onSubmit={handleSubmit}>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-first-name">
-                  First Name
-                </label>
-                <input
-                  name="firstName"
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name" type="text" placeholder="Jane" required
-                />
-                {/* <p className="text-red-500 text-xs italic">Please fill out this field.</p> */}
-              </div>
-              <div className="w-full md:w-1/2 px-3">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-last-name">
-                  Last Name
-                </label>
-                <input
-                  name="lastName"
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-last-name" type="text" placeholder="Doe" required
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-email">
-                  Email Address
-                </label>
-                <input
-                  name="email"
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-email" type="email" placeholder="********@*****.***" required
-                />
-                <ValidationError
-                  prefix="Email"
-                  field="email"
-                  errors={state.errors}
-                />
-              </div>
-            </div>
-            {/* Message */}
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3">
-                <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-message">
-                  Your Message
-                </label>
-                <textarea
-                  name="message"
-                  placeholder='Something awesome!'
-                  rows="10"
-                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-message" required
-                ></textarea>
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                />
-              </div>
-              <div className="flex justify-between w-full px-3">
-                <div className="md:flex md:items-center">
-                  <label className="block text-gray-500 font-bold">
-                    <input name="newsletter" className="mr-4 sm:mr-2 leading-tight" type="checkbox" />
-                    <span className="text-sm">
-                      Sign me up your newsletter!
-                    </span>
-                  </label>
+    <main className="bg-white text-gray-900">
+
+      <PageHero
+        image="/assets/kfestImages/Contact.jpg"
+        eyebrow="Get In Touch"
+        title="Contact Us"
+        subtitle="Questions about KASH? We'd love to hear from you — send us a message and we'll get back to you."
+      />
+
+      <div className="max-w-4xl mx-auto px-5 sm:px-10">
+
+        {/* MESSAGE FORM */}
+        <section className="py-20 mb-4">
+          <SectionHeading
+            align="center"
+            eyebrow="Send a Message"
+            title="Drop Us a Line"
+            subtitle="Fill out the form below and we'll get back to you as soon as we can."
+          />
+
+          <div className="border border-gray-200 rounded-2xl p-8 sm:p-10 mt-12 relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-kashBlue-600 to-kashGold-500" />
+
+            {state.succeeded ? (
+              <div className="text-center py-10">
+                <span className="inline-flex w-14 h-14 items-center justify-center rounded-full bg-kashBlue-50 text-kashBlue-600 mb-5">
+                  <Check className="w-7 h-7" />
+                </span>
+                <h3 className="text-2xl font-bold text-kashBlue-950 mb-3">Thank You!</h3>
+                <p className="text-gray-500 max-w-md mx-auto mb-8 leading-relaxed">
+                  Your message has been sent. We appreciate you reaching out and will get back to you soon.
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Button href="/" variant="outline" size="md">
+                    Return Home
+                  </Button>
+                  <Button href="https://app.joinit.com/o/kash" target="_blank" rel="noopener noreferrer" variant="primary" size="md">
+                    Become a Member <ArrowRight className="w-4 h-4" />
+                  </Button>
                 </div>
-                <button
-                  className="shadow bg-kashBlue-600 hover:bg-kashBlue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-2 sm:px-6 rounded"
-                  type="submit"
-                  disabled={state.submitting}>
-                  Send Message
-                </button>
               </div>
-            </div>
-          </form>
-        </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-2">
+                      First Name
+                    </label>
+                    <input
+                      id="firstName" name="firstName" type="text" placeholder="Jane" required
+                      className="block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-800 leading-tight transition-colors focus:outline-none focus:border-kashBlue-400 focus:bg-white"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-2">
+                      Last Name
+                    </label>
+                    <input
+                      id="lastName" name="lastName" type="text" placeholder="Doe" required
+                      className="block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-800 leading-tight transition-colors focus:outline-none focus:border-kashBlue-400 focus:bg-white"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    id="email" name="email" type="email" placeholder="you@example.com" required
+                    className="block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-800 leading-tight transition-colors focus:outline-none focus:border-kashBlue-400 focus:bg-white"
+                  />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-2" />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-2">
+                    Your Message
+                  </label>
+                  <textarea
+                    id="message" name="message" rows="8" placeholder="How can we help?" required
+                    className="block w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-800 leading-tight transition-colors focus:outline-none focus:border-kashBlue-400 focus:bg-white resize-y"
+                  ></textarea>
+                  <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-sm mt-2" />
+                </div>
+
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
+                  <label className="flex items-center gap-3 text-sm text-gray-600">
+                    <input name="newsletter" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-kashBlue-600 focus:ring-kashBlue-400" />
+                    Sign me up for the newsletter!
+                  </label>
+                  <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className="inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-200 bg-kashBlue-600 text-white shadow-sm hover:bg-kashBlue-700 hover:-translate-y-0.5 px-6 py-2.5 text-sm disabled:opacity-60 disabled:hover:translate-y-0 disabled:cursor-not-allowed"
+                  >
+                    {state.submitting ? "Sending..." : "Send Message"}
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Prefer email? Reach us directly at{" "}
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-kashBlue-700 font-semibold hover:underline">
+              {CONTACT_EMAIL}
+            </a>
+          </p>
+        </section>
+
       </div>
-    </div>
+    </main>
   );
 }

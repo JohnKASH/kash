@@ -12,6 +12,7 @@ const aboutLinks = [
   { label: "Meet Our Team", href: "/MeetOurTeam" },
   { label: "KASH History", href: "/KASHHistory" },
   { label: "Korean Festival", href: "/KoreanFestival" },
+  { label: "Contact Us", href: "/Contact" },
 ];
 
 const socials = [

@@ -13,6 +13,7 @@ const aboutLinks = [
   { label: "Meet Our Team", href: "/MeetOurTeam" },
   { label: "KASH History", href: "/KASHHistory" },
   { label: "Korean Festival", href: "/KoreanFestival" },
+  { label: "Contact Us", href: "/Contact" },
 ];
 
 const MEMBER_URL = "https://app.joinit.com/o/kash";
@@ -46,9 +47,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white/90 backdrop-blur-md transition-shadow duration-300 ${
-        scrolled ? "shadow-sm border-b border-gray-100" : "border-b border-gray-100/80"
-      }`}
+      className={`sticky top-0 z-50 bg-white/90 backdrop-blur-md transition-shadow duration-300 ${scrolled ? "shadow-sm border-b border-gray-100" : "border-b border-gray-100/80"
+        }`}
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
 
