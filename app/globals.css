@@ -2,9 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply text-kashBlack-600;
+    @apply text-kashBlack-600 antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-kashBlue-600 text-white;
+  }
+}
+
+@layer utilities {
+  /* Subtle entrance used by hero/section content */
+  .animate-rise {
+    animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

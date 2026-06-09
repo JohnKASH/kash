@@ -1,5 +1,7 @@
 "use client"
 import Image from "next/image";
+import PageHero from "@/components/PageHero";
+import SectionHeading from "@/components/SectionHeading";
 
 const team = [
   {
@@ -119,41 +121,30 @@ const team = [
 
 export default function MeetOurTeam() {
   return (
-    <main className="bg-white text-gray-900 font-sans">
+    <main className="bg-white text-gray-900">
 
-      {/* HERO */}
-      <div className="relative w-full h-96 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/assets/kfestImages/GroupPhoto.jpg')",
-          }}
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <h1 className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white text-3xl md:text-4xl lg:text-5xl font-bold px-10">
-          Meet the Team
-        </h1>
-      </div>
+      <PageHero
+        image="/assets/kfestImages/GroupPhoto.jpg"
+        eyebrow="Our People"
+        title="Meet the Team"
+        subtitle="Korean Festival Houston is made possible by a dedicated group of volunteers and leaders who give their time, talent, and heart to celebrate Korean culture with all of Houston."
+      />
 
       {/* INTRO */}
-      <div className="max-w-3xl mx-auto px-6 sm:px-10 pt-16 pb-4 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-1">The People Behind K-Fest</h2>
-        <div className="w-12 h-1 bg-kashBlue-600 rounded mx-auto mt-3 mb-6" />
-        <p className="text-gray-500 text-lg">
-          Korean Festival Houston is made possible by a dedicated group of volunteers and leaders who give their time, talent, and heart to celebrate Korean culture with all of Houston.
-        </p>
+      <div className="max-w-3xl mx-auto px-6 sm:px-10 pt-20 pb-4 text-center">
+        <SectionHeading align="center" eyebrow="Volunteers & Leaders" title="The People Behind K-Fest" />
       </div>
 
       {/* TEAM MEMBERS */}
-      <div className="max-w-4xl mx-auto px-6 sm:px-10 py-12 space-y-12 pb-24">
+      <div className="max-w-4xl mx-auto px-6 sm:px-10 py-12 space-y-8 pb-24">
         {team.map((member, i) => (
           <div
             key={member.name}
-            className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-start border border-gray-100 rounded-2xl p-6 md:p-8 hover:shadow-md transition-shadow duration-200`}
+            className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-start border border-gray-200 rounded-2xl p-6 md:p-8 hover:border-kashBlue-200 hover:shadow-md transition-all duration-200`}
           >
             {/* Photo */}
             <div className="w-full md:w-48 flex-shrink-0">
-              <div className="relative w-full md:w-48 h-52 md:h-56 rounded-xl overflow-hidden">
+              <div className="relative w-full md:w-48 h-52 md:h-56 rounded-xl overflow-hidden ring-1 ring-gray-100">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -167,8 +158,8 @@ export default function MeetOurTeam() {
             {/* Content */}
             <div className="flex-1">
               <div className="mb-4">
-                <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                <p className="text-xs font-bold tracking-widest uppercase text-kashBlue-600 mt-1">{member.title}</p>
+                <h3 className="text-xl font-bold text-kashBlue-950">{member.name}</h3>
+                <p className="text-xs font-semibold tracking-[0.16em] uppercase text-kashBlue-600 mt-1.5">{member.title}</p>
               </div>
 
               <div className="space-y-3 mb-5">
@@ -177,9 +168,9 @@ export default function MeetOurTeam() {
                 ))}
               </div>
 
-              <div className="bg-gray-50 rounded-xl px-4 py-4 space-y-1.5">
+              <div className="bg-kashBlue-50/60 border border-kashBlue-100 rounded-xl px-5 py-4 space-y-2">
                 {member.funFacts.map((fact, j) => (
-                  <p key={j} className="text-sm text-gray-600">{fact}</p>
+                  <p key={j} className="text-sm text-gray-600 leading-relaxed">{fact}</p>
                 ))}
               </div>
             </div>

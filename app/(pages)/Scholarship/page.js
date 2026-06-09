@@ -1,4 +1,8 @@
 "use client"
+import PageHero from "@/components/PageHero";
+import SectionHeading from "@/components/SectionHeading";
+import Button from "@/components/Button";
+import { ArrowRight, Trophy, Palette, MapPin, Check, X } from "@/components/icons";
 
 const faqs = [
   {
@@ -126,30 +130,28 @@ const faqs = [
 
 export default function ScholarshipPage() {
   return (
-    <main className="bg-white text-gray-900 font-sans">
+    <main className="bg-white text-gray-900">
 
-      {/* HERO */}
-      <div className="relative w-full h-96 overflow-hidden">
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: "url('/assets/kfestImages/Drummers.jpg')" }}
-        />
-        <div className="absolute inset-0 w-full h-full bg-black opacity-50" />
-        <h1 className="relative z-10 flex flex-col items-center justify-center w-full h-full text-center text-white text-3xl md:text-4xl lg:text-5xl font-bold px-10">
-          2026 KASH Scholarship Program
-        </h1>
-      </div>
+      <PageHero
+        image="/assets/kfestImages/Drummers.jpg"
+        eyebrow="2026 · Applications Open"
+        title="KASH Scholarship Program"
+        subtitle="Multiple $1,000 scholarships for Houston students — recognizing academic excellence and creative voice. You don't have to be Korean-American to apply."
+      >
+        <Button href="https://form.jotform.com/261508897875073" target="_blank" rel="noopener noreferrer" variant="light" size="lg">
+          Apply Now <ArrowRight className="w-4 h-4" />
+        </Button>
+      </PageHero>
 
       <div className="max-w-4xl mx-auto px-5 sm:px-10">
 
         {/* ABOUT */}
-        <section className="py-16">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">About the Program</h2>
-          <div className="w-12 h-1 bg-blue-800 rounded mx-auto mt-3 mb-8" />
+        <section className="py-20">
+          <SectionHeading align="center" eyebrow="The Program" title="About the Program" />
 
           {/* Why KASH created the scholarship */}
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl px-8 py-7 mb-8 max-w-2xl mx-auto">
-            <p className="text-sm font-bold tracking-widest uppercase text-blue-800 mb-2 text-center">Why This Scholarship Exists</p>
+          <div className="bg-kashBlue-50 border border-kashBlue-100 rounded-2xl px-8 py-7 mt-10 mb-8 max-w-2xl mx-auto">
+            <p className="text-xs font-semibold tracking-[0.18em] uppercase text-kashBlue-600 mb-3 text-center">Why This Scholarship Exists</p>
             <p className="text-gray-600 text-base text-center leading-relaxed">
               Since 2008, KASH has worked to bridge the Korean-American community and the greater Houston
               public through culture, leadership, and service. The KASH Scholarship Program is an extension
@@ -158,7 +160,7 @@ export default function ScholarshipPage() {
             </p>
           </div>
 
-          <p className="text-lg text-gray-500 text-center max-w-2xl mx-auto mb-4">
+          <p className="text-lg text-gray-500 text-center max-w-2xl mx-auto mb-4 leading-relaxed">
             The Korean American Society of Houston is proud to support students who are working hard,
             pursuing their goals, and making a positive impact in their communities. Through the 2026 KASH
             Scholarship Program, we hope to recognize students not only for academic achievement, but also
@@ -174,16 +176,17 @@ export default function ScholarshipPage() {
         </section>
 
         {/* AWARDS */}
-        <section className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">This Year&apos;s Awards</h2>
-          <div className="w-12 h-1 bg-blue-800 rounded mx-auto mt-3 mb-3" />
-          <p className="text-center text-gray-500 mb-4 max-w-2xl mx-auto">
-            KASH will award multiple $1,000 scholarships through the following opportunities.
-          </p>
+        <section className="mb-24">
+          <SectionHeading
+            align="center"
+            eyebrow="Two Ways to Apply"
+            title="This Year's Awards"
+            subtitle="KASH will award multiple $1,000 scholarships through the following opportunities."
+          />
 
           {/* Award count clarity notice */}
-          <div className="bg-amber-50 border border-amber-200 border-l-4 border-l-amber-500 rounded-xl px-6 py-4 mb-10 max-w-2xl mx-auto">
-            <p className="text-sm text-amber-900 leading-relaxed">
+          <div className="bg-kashGold-50 border border-kashGold-200 border-l-4 border-l-kashGold-500 rounded-xl px-6 py-4 mt-10 mb-10 max-w-2xl mx-auto">
+            <p className="text-sm text-kashGold-700 leading-relaxed">
               <span className="font-bold">Award Counts:</span> A minimum of 3 Academic Excellence Awards and 3 Creative Voice Awards will be given.
               We anticipate awarding <span className="font-semibold">10–12 scholarships total</span> across both categories in 2026,
               with final counts confirmed in September based on sponsorship commitments.
@@ -193,49 +196,55 @@ export default function ScholarshipPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
             {/* Card 1 */}
             <div className="border border-gray-200 rounded-2xl p-8 relative overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-800 to-amber-500 rounded-t-2xl" />
-              <div className="text-3xl mb-4">🏆</div>
-              <p className="text-xs font-bold tracking-widest uppercase text-blue-800 mb-2">Award I</p>
-              <h3 className="text-xl font-bold mb-3">KASH Academic Excellence Award</h3>
-              <p className="text-gray-500 text-sm">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-kashBlue-600 to-kashGold-500" />
+              <span className="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-kashBlue-50 text-kashBlue-600 mb-5">
+                <Trophy className="w-6 h-6" />
+              </span>
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-kashBlue-600 mb-2">Award I</p>
+              <h3 className="text-xl font-bold text-kashBlue-950 mb-3">KASH Academic Excellence Award</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
                 Recognizing outstanding students who demonstrate commitment to their education, perseverance,
                 leadership, and future potential.
               </p>
-              <span className="inline-block mt-4 bg-blue-50 text-blue-800 font-bold text-sm px-4 py-1 rounded-full">
+              <span className="inline-block mt-5 bg-kashBlue-50 text-kashBlue-700 font-bold text-sm px-4 py-1 rounded-full">
                 $1,000 · Multiple Recipients
               </span>
             </div>
 
             {/* Card 2 */}
             <div className="border border-gray-200 rounded-2xl p-8 relative overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-800 to-amber-500 rounded-t-2xl" />
-              <div className="text-3xl mb-4">🎨</div>
-              <p className="text-xs font-bold tracking-widest uppercase text-blue-800 mb-2">Award II</p>
-              <h3 className="text-xl font-bold mb-3">KASH Creative Voice Award</h3>
-              <p className="text-gray-500 text-sm">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-kashBlue-600 to-kashGold-500" />
+              <span className="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-kashBlue-50 text-kashBlue-600 mb-5">
+                <Palette className="w-6 h-6" />
+              </span>
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-kashBlue-600 mb-2">Award II</p>
+              <h3 className="text-xl font-bold text-kashBlue-950 mb-3">KASH Creative Voice Award</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
                 Celebrating students who express themselves through creativity and use their unique voice
                 to contribute meaningfully to their community.
               </p>
-              <span className="inline-block mt-4 bg-blue-50 text-blue-800 font-bold text-sm px-4 py-1 rounded-full">
+              <span className="inline-block mt-5 bg-kashBlue-50 text-kashBlue-700 font-bold text-sm px-4 py-1 rounded-full">
                 $1,000 · Multiple Recipients
               </span>
             </div>
           </div>
 
           {/* Recognition Notice */}
-          <div className="bg-blue-50 border border-blue-100 border-l-4 border-l-blue-800 rounded-xl p-6 flex gap-4 items-start">
-            <span className="text-2xl mt-0.5 flex-shrink-0">📍</span>
-            <div className="text-sm text-gray-800 leading-relaxed space-y-2">
+          <div className="bg-kashBlue-50 border border-kashBlue-100 border-l-4 border-l-kashBlue-600 rounded-xl p-6 flex gap-4 items-start">
+            <span className="inline-flex w-9 h-9 items-center justify-center rounded-full bg-white text-kashBlue-600 flex-shrink-0">
+              <MapPin className="w-5 h-5" />
+            </span>
+            <div className="text-sm text-gray-700 leading-relaxed space-y-2">
               <p>
                 Scholarship recipients will be notified in advance and{" "}
-                <span className="font-bold text-blue-800">required to attend</span> Korean Festival Houston
+                <span className="font-bold text-kashBlue-700">required to attend</span> Korean Festival Houston
                 at Discovery Green on{" "}
-                <span className="font-bold text-blue-800">October 10, 2026</span> to receive their award in person.
+                <span className="font-bold text-kashBlue-700">October 10, 2026</span> to receive their award in person.
               </p>
               <p>
                 Check-in details, including specific times and the KASH booth location, will be communicated
                 directly to recipients in advance. Recipients who are out of town or face a documented emergency
-                should contact <a href="mailto:John@kashouston.org" className="text-blue-800 font-semibold hover:underline">John@kashouston.org</a> as
+                should contact <a href="mailto:John@kashouston.org" className="text-kashBlue-700 font-semibold hover:underline">John@kashouston.org</a> as
                 early as possible — we handle these situations on a case-by-case basis.
               </p>
             </div>
@@ -243,26 +252,31 @@ export default function ScholarshipPage() {
         </section>
 
         {/* REQUIREMENTS */}
-        <section className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Requirements</h2>
-          <div className="w-12 h-1 bg-blue-800 rounded mx-auto mt-3 mb-3" />
-          <p className="text-center text-gray-500 mb-10">Review the requirements for each award before applying</p>
+        <section className="mb-24">
+          <SectionHeading
+            align="center"
+            eyebrow="Before You Apply"
+            title="Requirements"
+            subtitle="Review the requirements for each award before applying."
+          />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
 
             {/* Academic Excellence */}
             <div className="border border-gray-200 rounded-2xl p-8 relative overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-800 to-amber-500 rounded-t-2xl" />
-              <div className="text-3xl mb-4">🏆</div>
-              <p className="text-xs font-bold tracking-widest uppercase text-blue-800 mb-2">Award I</p>
-              <h3 className="text-xl font-bold mb-3">KASH Academic Excellence Award</h3>
-              <p className="text-gray-500 text-sm mb-4">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-kashBlue-600 to-kashGold-500" />
+              <span className="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-kashBlue-50 text-kashBlue-600 mb-5">
+                <Trophy className="w-6 h-6" />
+              </span>
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-kashBlue-600 mb-2">Award I</p>
+              <h3 className="text-xl font-bold text-kashBlue-950 mb-3">KASH Academic Excellence Award</h3>
+              <p className="text-gray-500 text-sm mb-4 leading-relaxed">
                 Recognizes students who demonstrate commitment to their education, perseverance, leadership,
                 and future potential — while contributing positively to their schools, families, and communities.
               </p>
 
               {/* GPA clarification */}
-              <div className="bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 mb-5 text-sm text-gray-600 italic">
+              <div className="bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 mb-5 text-sm text-gray-600 italic leading-relaxed">
                 We use a holistic review process. GPA is one factor among several — leadership, perseverance,
                 community involvement, and essay strength all matter. We look for a{" "}
                 <span className="font-semibold not-italic text-gray-800">3.0 GPA as a starting point</span>, but
@@ -270,21 +284,21 @@ export default function ScholarshipPage() {
               </div>
 
               <div className="mt-auto">
-                <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Requirements</p>
-                <ul className="space-y-2 mb-5">
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-3">Requirements</p>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start gap-2.5 text-sm text-gray-600">
+                    <Check className="w-4 h-4 mt-0.5 text-kashBlue-600 flex-shrink-0" />
                     <span>
                       <span className="font-semibold text-gray-800">GPA Starting Point: 3.0</span>
                       <span className="block text-gray-500 mt-0.5">Holistic review — a lower GPA does not disqualify you. Explain your circumstances in your essay.</span>
                     </span>
                   </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                  <li className="flex items-start gap-2.5 text-sm text-gray-600">
+                    <Check className="w-4 h-4 mt-0.5 text-kashBlue-600 flex-shrink-0" />
                     One-page resume required
                   </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                  <li className="flex items-start gap-2.5 text-sm text-gray-600">
+                    <Check className="w-4 h-4 mt-0.5 text-kashBlue-600 flex-shrink-0" />
                     <span>
                       <span className="font-semibold text-gray-800">Two short essays required</span>
                       <span className="block text-gray-500 mt-0.5">600-word maximum per essay. Prompts are provided in the JotForm application.</span>
@@ -296,32 +310,34 @@ export default function ScholarshipPage() {
 
             {/* Creative Voice */}
             <div className="border border-gray-200 rounded-2xl p-8 relative overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-800 to-amber-500 rounded-t-2xl" />
-              <div className="text-3xl mb-4">🎨</div>
-              <p className="text-xs font-bold tracking-widest uppercase text-blue-800 mb-2">Award II</p>
-              <h3 className="text-xl font-bold mb-3">KASH Creative Voice Award</h3>
-              <p className="text-gray-500 text-sm mb-4">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-kashBlue-600 to-kashGold-500" />
+              <span className="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-kashBlue-50 text-kashBlue-600 mb-5">
+                <Palette className="w-6 h-6" />
+              </span>
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-kashBlue-600 mb-2">Award II</p>
+              <h3 className="text-xl font-bold text-kashBlue-950 mb-3">KASH Creative Voice Award</h3>
+              <p className="text-gray-500 text-sm mb-4 leading-relaxed">
                 Celebrates creativity, storytelling, and self-expression. Designed for students who want to share
                 their ideas, perspectives, and talents through creative work.
               </p>
-              <p className="text-gray-400 text-xs italic mb-5">
+              <p className="text-gray-400 text-xs italic mb-5 leading-relaxed">
                 Submissions may explore Korean culture, identity, tradition, community, or personal interpretation
                 — or any theme authentic to you.
               </p>
 
               <div className="mt-auto">
-                <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Requirements</p>
-                <ul className="space-y-2 mb-5">
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-3">Requirements</p>
+                <ul className="space-y-2.5 mb-5">
+                  <li className="flex items-start gap-2.5 text-sm text-gray-600">
+                    <Check className="w-4 h-4 mt-0.5 text-kashBlue-600 flex-shrink-0" />
                     No GPA requirement — open to all eligible students
                   </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                  <li className="flex items-start gap-2.5 text-sm text-gray-600">
+                    <Check className="w-4 h-4 mt-0.5 text-kashBlue-600 flex-shrink-0" />
                     One original creative submission required
                   </li>
-                  <li className="flex items-start gap-2 text-sm text-gray-600">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-800 flex-shrink-0" />
+                  <li className="flex items-start gap-2.5 text-sm text-gray-600">
+                    <Check className="w-4 h-4 mt-0.5 text-kashBlue-600 flex-shrink-0" />
                     <span>
                       <span className="font-semibold text-gray-800">Artist&apos;s statement required</span>
                       <span className="block text-gray-500 mt-0.5">600-word maximum</span>
@@ -329,14 +345,14 @@ export default function ScholarshipPage() {
                   </li>
                 </ul>
 
-                <p className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-3">Accepted Formats</p>
+                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-3">Accepted Formats</p>
                 <div className="flex flex-wrap gap-2">
                   {[
                     "Video", "Photography", "Artwork or Drawing", "Digital Design",
                     "Music", "Dance", "Animation",
                     "Multimedia Projects", "Other Creative Formats",
                   ].map((format) => (
-                    <span key={format} className="bg-blue-50 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">
+                    <span key={format} className="bg-kashBlue-50 text-kashBlue-700 text-xs font-medium px-3 py-1 rounded-full">
                       {format}
                     </span>
                   ))}
@@ -348,12 +364,15 @@ export default function ScholarshipPage() {
         </section>
 
         {/* HOW TO APPLY */}
-        <section className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">How to Apply</h2>
-          <div className="w-12 h-1 bg-blue-800 rounded mx-auto mt-3 mb-3" />
-          <p className="text-center text-gray-500 mb-10">Complete all steps before the deadline</p>
+        <section className="mb-24">
+          <SectionHeading
+            align="center"
+            eyebrow="Three Steps"
+            title="How to Apply"
+            subtitle="Complete all steps before the deadline."
+          />
 
-          <div className="border border-gray-200 rounded-2xl overflow-hidden divide-y divide-gray-200">
+          <div className="border border-gray-200 rounded-2xl overflow-hidden divide-y divide-gray-200 mt-12">
             {[
               {
                 num: 1,
@@ -369,9 +388,9 @@ export default function ScholarshipPage() {
                 num: 3,
                 title: "Submit Everything by the Deadline",
                 custom: (
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-500 text-sm leading-relaxed">
                     Submit your completed application and all materials to{" "}
-                    <a href="mailto:John@kashouston.org" className="text-blue-800 font-semibold hover:underline">
+                    <a href="mailto:John@kashouston.org" className="text-kashBlue-700 font-semibold hover:underline">
                       John@kashouston.org
                     </a>{" "}
                     by <span className="font-bold text-gray-900">September 11, 2026 at 11:59 PM</span>. No late applications will be accepted.
@@ -379,13 +398,13 @@ export default function ScholarshipPage() {
                 ),
               },
             ].map((step) => (
-              <div key={step.num} className="flex items-start gap-5 p-6 hover:bg-blue-50 transition-colors duration-150">
-                <div className="w-9 h-9 rounded-full bg-blue-800 text-white flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
+              <div key={step.num} className="flex items-start gap-5 p-6 hover:bg-kashBlue-50/50 transition-colors duration-150">
+                <div className="w-9 h-9 rounded-full bg-kashBlue-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
                   {step.num}
                 </div>
                 <div>
-                  <h4 className="font-bold mb-1">{step.title}</h4>
-                  {step.custom ?? <p className="text-gray-500 text-sm">{step.body}</p>}
+                  <h4 className="font-bold text-kashBlue-950 mb-1">{step.title}</h4>
+                  {step.custom ?? <p className="text-gray-500 text-sm leading-relaxed">{step.body}</p>}
                 </div>
               </div>
             ))}
@@ -393,12 +412,16 @@ export default function ScholarshipPage() {
         </section>
 
         {/* DISQUALIFICATIONS */}
-        <section className="mb-20">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Disqualifications</h2>
-          <div className="w-12 h-1 bg-red-600 rounded mx-auto mt-3 mb-3" />
-          <p className="text-center text-gray-500 mb-10">Applications will be disqualified for any of the following</p>
+        <section className="mb-24">
+          <SectionHeading
+            align="center"
+            accent="red"
+            eyebrow="Please Avoid"
+            title="Disqualifications"
+            subtitle="Applications will be disqualified for any of the following."
+          />
 
-          <ul className="border border-red-100 rounded-2xl overflow-hidden divide-y divide-red-100">
+          <ul className="border border-red-100 rounded-2xl overflow-hidden divide-y divide-red-50 mt-12">
             {[
               "Submissions containing profanity, hate speech, or inappropriate content",
               "Plagiarized, copied, or AI-generated work submitted as original work",
@@ -407,7 +430,7 @@ export default function ScholarshipPage() {
               "Creative projects that do not follow the provided prompt or guidelines",
             ].map((item) => (
               <li key={item} className="flex items-start gap-4 px-6 py-4 text-sm text-gray-800">
-                <span className="text-red-600 font-bold mt-0.5 flex-shrink-0">✕</span>
+                <X className="w-4 h-4 mt-0.5 text-red-500 flex-shrink-0" />
                 {item}
               </li>
             ))}
@@ -415,41 +438,41 @@ export default function ScholarshipPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-br from-blue-800 to-blue-950 rounded-2xl px-8 py-16 text-center mb-20 relative overflow-hidden">
-          <p className="text-9xl text-white/[0.03] absolute top-0 right-0 pointer-events-none select-none leading-none">✦</p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Apply?</h2>
-          <p className="text-white/70 max-w-md mx-auto mb-8">
+        <section className="bg-gradient-to-br from-kashBlue-800 to-kashBlue-950 rounded-3xl px-8 py-16 text-center mb-24 relative overflow-hidden">
+          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">Ready to Apply?</h2>
+          <p className="text-white/70 max-w-md mx-auto mb-8 leading-relaxed">
             Take the first step — submit your application today. We look forward to learning about your story.
           </p>
-          <a href="https://form.jotform.com/261508897875073" target="_blank" rel="noopener noreferrer">
-            <button className="bg-white text-blue-800 font-bold text-base px-10 py-3.5 rounded-xl hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg">
-              Apply Now →
-            </button>
-          </a>
-          <p className="text-white/40 text-xs tracking-wide mt-5">
+          <Button href="https://form.jotform.com/261508897875073" target="_blank" rel="noopener noreferrer" variant="light" size="lg" className="mx-auto">
+            Apply Now <ArrowRight className="w-4 h-4" />
+          </Button>
+          <p className="text-white/40 text-xs tracking-wide mt-6">
             Deadline: September 11, 2026 · 11:59 PM · Questions? Email John@kashouston.org
           </p>
         </section>
 
         {/* FAQ */}
         <section className="mb-24">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Frequently Asked Questions</h2>
-          <div className="w-12 h-1 bg-blue-800 rounded mx-auto mt-3 mb-3" />
-          <p className="text-center text-gray-500 mb-12">
+          <SectionHeading
+            align="center"
+            eyebrow="Questions?"
+            title="Frequently Asked Questions"
+          />
+          <p className="text-center text-gray-500 mt-5 mb-12">
             Don&apos;t see your question?{" "}
-            <a href="mailto:John@kashouston.org" className="text-blue-800 font-semibold hover:underline">Email us</a>.
+            <a href="mailto:John@kashouston.org" className="text-kashBlue-700 font-semibold hover:underline">Email us</a>.
           </p>
 
           <div className="space-y-10">
             {faqs.map((group) => (
               <div key={group.category}>
-                <p className="text-xs font-bold tracking-widest uppercase text-blue-800 mb-4">{group.category}</p>
+                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-kashBlue-600 mb-4">{group.category}</p>
                 <div className="border border-gray-200 rounded-2xl overflow-hidden divide-y divide-gray-100">
                   {group.items.map((item) => (
-                    <details key={item.q} className="group px-6 py-4 hover:bg-blue-50 transition-colors duration-150 cursor-pointer">
+                    <details key={item.q} className="group px-6 py-4 hover:bg-kashBlue-50/50 transition-colors duration-150 cursor-pointer">
                       <summary className="flex items-start justify-between gap-4 font-semibold text-sm text-gray-800 list-none">
                         {item.q}
-                        <span className="text-blue-800 text-lg leading-none flex-shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
+                        <span className="text-kashBlue-600 text-lg leading-none flex-shrink-0 group-open:rotate-45 transition-transform duration-200">+</span>
                       </summary>
                       <p className="mt-3 text-sm text-gray-500 leading-relaxed">{item.a}</p>
                     </details>
@@ -463,7 +486,7 @@ export default function ScholarshipPage() {
         {/* CONTACT */}
         <p className="text-center text-gray-500 text-sm pb-20">
           Questions, comments, or concerns? Please email{" "}
-          <a href="mailto:John@kashouston.org" className="text-blue-800 font-semibold hover:underline">
+          <a href="mailto:John@kashouston.org" className="text-kashBlue-700 font-semibold hover:underline">
             John@kashouston.org
           </a>
         </p>

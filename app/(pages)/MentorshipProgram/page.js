@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import { useLanguage } from "../components/LanguageContext";
+import { useLanguage } from "@/components/LanguageContext";
 
 export default function Home() {
   const { language } = useLanguage();
