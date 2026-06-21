@@ -4,6 +4,18 @@ import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
 import { ArrowRight, Clock, MapPin, Sparkles } from "@/components/icons";
 
+// Colors for event tags. To add a new tag, just set `tag: "Your Text"` on an
+// event below — known tags get their color from here, anything else falls back
+// to DEFAULT_TAG_STYLE.
+const tagStyles = {
+  Cultural: "bg-kashGold-100 text-kashGold-700",
+  Social: "bg-purple-100 text-purple-700",
+  Community: "bg-green-100 text-green-700",
+  "Members Only": "bg-kashBlue-100 text-kashBlue-700",
+  "★ Main Event": "bg-white text-kashBlue-700",
+};
+const DEFAULT_TAG_STYLE = "bg-gray-100 text-gray-700";
+
 const events = [
   {
     id: 1,
@@ -14,7 +26,6 @@ const events = [
     time: "TBD",
     location: "Houston Food Bank",
     tag: "Community",
-    tagColor: "bg-green-100 text-green-700",
     highlight: false,
   },
   {
@@ -26,7 +37,6 @@ const events = [
     time: "10:00 AM",
     location: "TBD",
     tag: "Social",
-    tagColor: "bg-purple-100 text-purple-700",
     highlight: false,
   },
   {
@@ -38,7 +48,6 @@ const events = [
     time: "TBD",
     location: "TBD",
     tag: "Members Only",
-    tagColor: "bg-kashBlue-100 text-kashBlue-700",
     highlight: false,
   },
   {
@@ -50,7 +59,6 @@ const events = [
     time: "TBD",
     location: "TBD",
     tag: "Cultural",
-    tagColor: "bg-kashGold-100 text-kashGold-700",
     highlight: false,
     tentative: true,
   },
@@ -63,7 +71,6 @@ const events = [
     time: "TBD",
     location: "TBD",
     tag: "Cultural",
-    tagColor: "bg-kashGold-100 text-kashGold-700",
     highlight: false,
   },
   {
@@ -75,7 +82,6 @@ const events = [
     time: "TBD",
     location: "TBD",
     tag: "Social",
-    tagColor: "bg-purple-100 text-purple-700",
     highlight: false,
     tentative: true,
   },
@@ -87,10 +93,12 @@ const events = [
     description: "The biggest event of the year is back — and bigger than ever. Two full days of Korean culture, food, music, performances, and community in the heart of Houston. Free and open to all.",
     time: "All Day",
     location: "Discovery Green, Houston",
-    tag: "★ Main Event",
-    tagColor: "bg-white text-kashBlue-700",
+    tag: "★ Main Event", 
     highlight: true,
-    link: { label: "More Info", href: "https://www.kfesthouston.com/" },
+    links: [
+      { label: "More Info", href: "https://www.kfesthouston.com/", variant: "light" },
+      { label: "Volunteer for KFest", href: "https://form.jotform.com/241558126341150", variant: "gold" },
+    ],
   },
   {
     id: 8,
@@ -101,7 +109,6 @@ const events = [
     time: "TBD",
     location: "TBD",
     tag: "Social",
-    tagColor: "bg-purple-100 text-purple-700",
     highlight: false,
   },
   {
@@ -113,7 +120,6 @@ const events = [
     time: "TBD",
     location: "TBD",
     tag: "Social",
-    tagColor: "bg-purple-100 text-purple-700",
     highlight: false,
   },
 ];
@@ -175,7 +181,7 @@ export default function UpcomingEvents() {
                         <h3 className={`font-bold text-lg leading-tight ${event.highlight ? "text-white" : "text-kashBlue-950"}`}>
                           {event.title}
                         </h3>
-                        <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${event.tagColor}`}>
+                        <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${tagStyles[event.tag] ?? DEFAULT_TAG_STYLE}`}>
                           {event.tag}
                         </span>
                         {event.tentative && (
@@ -206,10 +212,14 @@ export default function UpcomingEvents() {
                     )}
                   </div>
 
-                  {event.link && (
-                    <Button href={event.link.href} target="_blank" rel="noopener noreferrer" variant="light" size="sm" className="mt-4">
-                      {event.link.label} <ArrowRight className="w-4 h-4" />
-                    </Button>
+                  {event.links && (
+                    <div className="mt-4 flex flex-wrap gap-3">
+                      {event.links.map((link) => (
+                        <Button key={link.href} href={link.href} target="_blank" rel="noopener noreferrer" variant={link.variant ?? "light"} size="sm">
+                          {link.label} <ArrowRight className="w-4 h-4" />
+                        </Button>
+                      ))}
+                    </div>
                   )}
                 </div>
               </div>
