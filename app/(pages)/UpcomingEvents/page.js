@@ -2,7 +2,7 @@
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
-import { ArrowRight, Clock, MapPin, Sparkles } from "@/components/icons";
+import { ArrowRight, Clock, Instagram, Mail, MapPin, Sparkles } from "@/components/icons";
 
 // Colors for event tags. To add a new tag, just set `tag: "Your Text"` on an
 // event below — known tags get their color from here, anything else falls back
@@ -12,6 +12,7 @@ const tagStyles = {
   Social: "bg-purple-100 text-purple-700",
   Community: "bg-green-100 text-green-700",
   "Members Only": "bg-kashBlue-100 text-kashBlue-700",
+  "Book Club": "bg-rose-100 text-rose-700",
   "★ Main Event": "bg-white text-kashBlue-700",
 };
 const DEFAULT_TAG_STYLE = "bg-gray-100 text-gray-700";
@@ -27,17 +28,19 @@ const events = [
     location: "Houston Food Bank",
     tag: "Community",
     highlight: false,
+    past: true,
   },
   {
     id: 2,
     date: { month: "JUN", day: "27", year: "2026" },
     title: "KASH Book Club",
-    subtitle: "First Meeting — Monthly Series",
-    description: "The inaugural meeting of the KASH Book Club! Come ready to discuss, connect, and share. This will be a recurring monthly event — stay tuned for future dates and book picks.",
+    subtitle: "First Meeting — Recurring Series",
+    description: "The inaugural meeting of the KASH Book Club! Come ready to discuss, connect, and share. This is a recurring event — see below for upcoming reads and dates.",
     time: "10:00 AM",
     location: "TBD",
-    tag: "Social",
+    tag: "Book Club",
     highlight: false,
+    past: true,
   },
   {
     id: 3,
@@ -49,6 +52,7 @@ const events = [
     location: "TBD",
     tag: "Members Only",
     highlight: false,
+    past: true,
   },
   {
     id: 4,
@@ -61,6 +65,17 @@ const events = [
     tag: "Cultural",
     highlight: false,
     tentative: true,
+  },
+  {
+    id: 10,
+    date: { month: "AUG", day: "22", year: "2026" },
+    title: "KASH Book Club",
+    subtitle: "August Read — Oxford Soju Club by Jinwoo Park",
+    description: "Our August pick is <em>Oxford Soju Club</em> by Jinwoo Park. Grab a copy, get reading, and join us for coffee and conversation.",
+    time: "10:00 – 11:30 AM",
+    location: "Coffee & Trein",
+    tag: "Book Club",
+    highlight: false,
   },
   {
     id: 5,
@@ -101,6 +116,17 @@ const events = [
     ],
   },
   {
+    id: 11,
+    date: { month: "OCT", day: "24", year: "2026" },
+    title: "KASH Book Club",
+    subtitle: "October Read — Your Letter by Hyeon A. Cho",
+    description: "October's pick is <em>Your Letter</em> by Hyeon A. Cho. Location to be announced — check back soon!",
+    time: "10:00 – 11:30 AM",
+    location: "TBD",
+    tag: "Book Club",
+    highlight: false,
+  },
+  {
     id: 8,
     date: { month: "NOV", day: "11", year: "2026" },
     title: "KASH Friendsgiving Potluck",
@@ -109,6 +135,17 @@ const events = [
     time: "TBD",
     location: "TBD",
     tag: "Social",
+    highlight: false,
+  },
+  {
+    id: 12,
+    date: { month: "DEC", day: "12", year: "2026" },
+    title: "KASH Book Club",
+    subtitle: "December Read — The Rainfall Market by You Yeong-Gwang",
+    description: "Close out the year with <em>The Rainfall Market</em> by You Yeong-Gwang. Location to be announced — check back soon!",
+    time: "10:00 – 11:30 AM",
+    location: "TBD",
+    tag: "Book Club",
     highlight: false,
   },
   {
@@ -150,7 +187,7 @@ export default function UpcomingEvents() {
               className={`relative rounded-2xl border overflow-hidden transition-shadow duration-200 hover:shadow-lg ${event.highlight
                 ? "border-kashBlue-700 bg-gradient-to-br from-kashBlue-700 to-kashBlue-950 text-white"
                 : "border-gray-200 bg-white"
-                }`}
+                } ${event.past ? "opacity-50 grayscale" : ""}`}
             >
               {/* top accent bar for non-highlighted */}
               {!event.highlight && (
@@ -165,7 +202,7 @@ export default function UpcomingEvents() {
                   <span className={`text-xs font-bold tracking-widest uppercase ${event.highlight ? "text-kashGold-300" : "text-kashBlue-600"}`}>
                     {event.date.month}
                   </span>
-                  <span className={`text-3xl font-bold leading-none my-1 ${event.highlight ? "text-white" : "text-kashBlue-950"}`}>
+                  <span className={`text-3xl font-bold leading-none my-1 ${event.past ? "line-through decoration-2" : ""} ${event.highlight ? "text-white" : "text-kashBlue-950"}`}>
                     {event.date.day}
                   </span>
                   <span className={`text-xs ${event.highlight ? "text-white/50" : "text-gray-400"}`}>
@@ -178,12 +215,17 @@ export default function UpcomingEvents() {
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <h3 className={`font-bold text-lg leading-tight ${event.highlight ? "text-white" : "text-kashBlue-950"}`}>
+                        <h3 className={`font-bold text-lg leading-tight ${event.past ? "line-through decoration-2" : ""} ${event.highlight ? "text-white" : "text-kashBlue-950"}`}>
                           {event.title}
                         </h3>
                         <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${tagStyles[event.tag] ?? DEFAULT_TAG_STYLE}`}>
                           {event.tag}
                         </span>
+                        {event.past && (
+                          <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-gray-200 text-gray-600">
+                            Past Event
+                          </span>
+                        )}
                         {event.tentative && (
                           <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-yellow-100 text-yellow-700">
                             Tentative
@@ -246,7 +288,7 @@ export default function UpcomingEvents() {
         </section>
 
         {/* KFEST CTA */}
-        <section className="mb-24">
+        <section className="mb-12">
           <div className="border border-gray-200 rounded-2xl px-8 py-10 text-center hover:shadow-md transition-shadow duration-200">
             <span className="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-kashBlue-50 text-kashBlue-600 mb-5">
               <Sparkles className="w-7 h-7" />
@@ -258,6 +300,30 @@ export default function UpcomingEvents() {
             <Button href="https://www.kfesthouston.com/" target="_blank" rel="noopener noreferrer" variant="primary" size="lg" className="mx-auto">
               Visit KFestHouston.com <ArrowRight className="w-4 h-4" />
             </Button>
+          </div>
+        </section>
+
+        {/* QUESTIONS */}
+        <section className="mb-24 text-center">
+          <h2 className="text-xl font-bold text-kashBlue-950 mb-2">Questions About an Event?</h2>
+          <p className="text-gray-500 text-sm max-w-sm mx-auto mb-6 leading-relaxed">
+            Reach out any time — we&apos;re happy to help with details, RSVPs, or anything else.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://www.instagram.com/kashouston/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold text-kashBlue-950 hover:border-kashBlue-600 hover:text-kashBlue-700 transition-colors duration-200"
+            >
+              <Instagram className="w-4 h-4" /> @kashouston
+            </a>
+            <a
+              href="mailto:info@kashouston.org"
+              className="inline-flex items-center gap-2 rounded-full border border-gray-200 px-5 py-2.5 text-sm font-semibold text-kashBlue-950 hover:border-kashBlue-600 hover:text-kashBlue-700 transition-colors duration-200"
+            >
+              <Mail className="w-4 h-4" /> info@kashouston.org
+            </a>
           </div>
         </section>
 
