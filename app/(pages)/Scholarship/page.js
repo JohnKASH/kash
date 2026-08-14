@@ -2,7 +2,7 @@
 import PageHero from "@/components/PageHero";
 import SectionHeading from "@/components/SectionHeading";
 import Button from "@/components/Button";
-import { ArrowRight, Trophy, Palette, MapPin, Check, X } from "@/components/icons";
+import { ArrowRight, Trophy, Palette, MapPin, Check, X, Globe } from "@/components/icons";
 
 const faqs = [
   {
@@ -22,7 +22,7 @@ const faqs = [
       },
       {
         q: "Can international students or non-U.S. citizens apply?",
-        a: "Please email John@kashouston.org to discuss your specific situation before applying."
+        a: "Yes. Visa and immigration status are NOT taken into consideration at any point in our review. International students, visa holders, and non-U.S. citizens are all encouraged to apply. The only requirement is that recipients must be able to attend Korean Festival Houston on October 10, 2026 to receive their award in person."
       },
       {
         q: "What grade levels are eligible?",
@@ -360,6 +360,25 @@ export default function ScholarshipPage() {
               </div>
             </div>
 
+          </div>
+
+          {/* OPEN TO ALL — VISA STATUS */}
+          <div className="mt-6 border border-kashBlue-100 bg-kashBlue-50/60 rounded-2xl px-6 py-6 sm:px-8 flex flex-col sm:flex-row gap-4 sm:gap-5 items-start">
+            <span className="inline-flex w-11 h-11 flex-shrink-0 items-center justify-center rounded-xl bg-white text-kashBlue-600">
+              <Globe className="w-5 h-5" />
+            </span>
+            <div>
+              <h3 className="text-base font-bold text-kashBlue-950 mb-1.5">Open to All Applicants — Visa Status Is Not a Factor</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Both awards are open to everyone.{" "}
+                <span className="font-semibold text-gray-800">
+                  Visa or immigration status will NOT be taken into consideration
+                </span>{" "}
+                at any point in our review. International students, visa holders, and non-U.S. citizens are all
+                encouraged to apply. If your application is strong and you are able to attend Korean Festival
+                Houston to receive your award in person, you are eligible.
+              </p>
+            </div>
           </div>
         </section>
 
